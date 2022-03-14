@@ -1,0 +1,70 @@
+@font-face {
+    src: url(../styles/fonts/Poppins-Bold.ttf);
+}
+
+.GloryToUkraine {
+    width: 100%;
+    height: 100%;
+}
+
+.blue {
+    width: 100%;
+    height: auto;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow {
+    width: 100%;
+    height: auto;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country {
+    font-family: 'poppins-bold', sans-serif;
+    font-size: 120px;
+    color: yellow;
+    padding: 120px;
+}
+
+.heroes {
+    font-family: 'poppins-bold', sans-serif;
+    font-size: 120px;
+    color: blue;
+    padding: 120px;
+}
+
+.back {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+}
+
+
+.Back {
+    padding: 150px;
+}
+
+a h1 {
+    font-family: 'poppins-bold', sans-serif;
+    font-size: 50px;
+    color: red;
+    transition: 2s;
+}
+
+a h1:hover {
+    font-size: 70px;
+    transition: 2s;
+    color: white;
+    background-image: url(../assets/images/Blood.jpg);
+}
+
+

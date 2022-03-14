@@ -1,0 +1,343 @@
+@font-face {
+    src: url(../styles/fonts/Poppins-Black.ttf);
+    font-family: 'poppins-black';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Bold.ttf);
+    font-family: 'poppins-bold';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Light.ttf);
+    font-family: 'poppins-light';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Medium.ttf);
+    font-family: 'poppins-medium';
+}
+
+
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 5.9%;
+    padding-right: 5.9%;
+}
+
+.logo {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1:hover {
+    cursor: pointer ;
+}
+
+.Logo {
+    font-size: 40px;
+    font-family: 'poppins-black', sans-serif;
+    font-weight: bold;
+}
+
+.unification {
+    width: 200px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* <============================== Page Switcher ==============================> */
+
+:root {
+    --clr: #222327;
+}
+
+nav ul li a span {
+    font-family: 'poppins-medium', sans-serif;
+}
+
+.navigation {
+    position: relative;
+    width: 320px;
+    height: 70px;
+    background: rgb(255, 143, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 290px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background:rgb(255, 2, 158);
+    border-radius: 50%;
+    border: 6px solid white;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 white;
+    transition: 1s;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 white;
+    transition: 1s;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+
+
+/* <============================== Language Switcher ==============================> */
+
+.lang-menu {
+    position: relative;
+}
+
+.selected-lang {
+    cursor: pointer;
+    font-family: 'poppins-medium', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    width: 100px;
+    transition: 1s;
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../assets/icons/USA-flag.svg);
+    background-repeat: no-repeat;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    border-radius: 10%;
+    font-family: 'poppins-medium', sans-serif;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+.lang-menu ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    width: 137px;
+    display: block;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background-image: url(../assets/icons/GE-flag.svg);
+    background-repeat: no-repeat;
+}
+
+.lang-menu ul li a:hover {
+    background-color: rgb(255, 112, 172);
+    transition: 0.5s;
+    cursor: pointer;    
+}
+
+.lang-menu ul li .ge:before {
+    background-image: url(../assets/icons/GE-flag.svg);
+}
+
+.lang-menu ul li .en:before {
+    background-image: url(../assets/icons/USA-flag.svg);
+}
+
+.lang-menu ul li .de:before {
+    background-image: url(../assets/icons/DE-flag.svg);
+}
+
+.lang-menu ul li .ru:before {
+    background-image: url(../assets/icons/RU-flag.svg);
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
+
+body {
+    transition: 1s;
+}
+
+input {
+    border: none;
+    background: transparent;
+    border-color: transparet;
+}
+
+.dm {
+    background-image: url(../assets/icons/moon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+
+.form-check-input {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+[data-theme="dark"] {
+    background: black;
+    transition: 1s;
+}
+
+[data-theme = "dark"] .dm{
+    background-image: url(../assets/icons/sun.png);
+    transition: 1s;
+}
+
+[data-theme = "dark"] .selected-lang{
+    color: white;
+    transition: 1s;
+}
+
+[data-theme = "dark"] .indicator {
+    border-color: black;
+    transition: 1s;
+}
+
+[data-theme = "dark"] .indicator::before {
+    box-shadow: 1px -10px 0 0 black;
+    transition: 1s;
+}
+
+[data-theme = "dark"] .indicator::after {
+    box-shadow: 1px -10px 0 0 black;
+    transition: 1s;
+}
+
+[data-theme = "dark"] .Logo {
+    color: white;
+}
+
+

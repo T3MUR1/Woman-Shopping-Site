@@ -1,0 +1,134 @@
+@font-face {
+    src: url(../styles/fonts/Poppins-Black.ttf);
+    font-family: 'poppins-black';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Bold.ttf);
+    font-family: 'poppins-bold';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Light.ttf);
+    font-family: 'poppins-light';
+}
+
+@font-face {
+    src: url(../styles/fonts/Poppins-Medium.ttf);
+    font-family: 'poppins-medium';
+}
+
+
+
+.horizontalPhotos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 300px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex: wrap;
+    padding-bottom: 280px;
+}
+
+.horizontalPhotos img {
+    width: 12.5%;
+    height: auto;
+    transition: 1s;
+}
+
+.horizontalPhotos img:hover {
+    transform: translateY(-60px);
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 10px solid pink;
+}
+
+.copyright {
+    font-family: 'poppins-light',sans-serif;
+    font-size: 16px;
+}
+
+.footerinfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 60px;
+}
+
+:root {
+    --bg: white;
+}
+
+.ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+.ul .li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ul .li:hover {
+    z-index: 10000;
+    transform: scale(0.75);
+}
+
+.ul .li::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr),
+    0 0 0 20px var(--bg),
+    0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+
+.ul .li:hover::before {
+    inset: 0px;
+}
+
+.ul .li::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+}
+
+.ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.ul .li:hover a {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr))
+            drop-shadow(0 0 40px var(--clr))
+            drop-shadow(0 0 60px var(--clr));
+}
+
+
+[data-theme = "dark"] .copyright {
+    color: white;
+}
+

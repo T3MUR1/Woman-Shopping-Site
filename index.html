@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "styles/header.css">
+    <link rel = "stylesheet" type = "text/css" href = "styles/main.css">
+    <link rel = "stylesheet" type = "text/css" href = "styles/footer.css">
+    <link rel = "stylesheet" type = "text/css" href = "styles/reset.css">
+    <link rel = "stylesheet" type = "text/css" href = "styles/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel = "icon" href = "assets/icons/icon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SELLO</title>
+</head>
+<body>
+    <header class = "header">
+        <div class = "logo">
+            <h1 class = "Logo">SELLO</h1>
+            <img src = "assets/icons/icon.svg">
+        </div>
+        <nav class = "navigation">
+            <ul>
+                <li class = "list active">
+                    <a href = "#">
+                        <span class = "icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class = "text home">Home</span>
+                    </a>
+                </li>
+                <li class = "list">
+                    <a href = "#">
+                        <span class = "icon">
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </span>
+                        <span class = "text product">Product</span>
+                    </a>
+                </li>
+                <li class = "list">
+                    <a href = "#">
+                        <span class = "icon">
+                            <ion-icon name="mail-open-outline"></ion-icon>
+                        </span>
+                        <span class = "text blog">Blog</span>
+                    </a>
+                </li>
+                <li class = "list">
+                    <a href = "#">
+                        <span class = "icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class = "text contact">Contact</span>
+                    </a>
+                </li>
+                <div class = "indicator"></div>
+
+                <script>
+                    const list = document.querySelectorAll('.list');
+                    function activeLink(){
+                        list.forEach((item) => 
+                        item.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                    list.forEach((item) => 
+                    item.addEventListener('click', activeLink));
+                </script>
+            </ul>
+        </nav>
+
+        <div class = "unification">
+            <div class = "lang-menu">
+                <div class="selected-lang">
+                    English
+                </div>
+                <ul class = "langwrap">
+                    <li>
+                        <a href = "#" class = "ge" language = 'georgian'>Georgian</a>
+                    </li>
+                    <li>
+                        <a href = "#" class = "en activelang" language = 'english'>English</a>
+                    </li>
+                    <li>
+                        <a href = "#" class = "de" language = 'german'>German</a>
+                    </li>
+                    <li>
+                        <a href = "Слава Украине!.html" class = "ru">Russian</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="icon dm"><input type="checkbox" class="form-check-input" id="darkSwitch" title="მუქი თემა"> </div>
+        </div>
+        
+
+        
+    </header>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src = "scripts/theme-toggle.js"></script>
+    <script src = "scripts/languageSwitcher.js"></script>
+
+    <main>
+        <div class="container">
+            <h1 class = "title">SALE OFF! UP TO 70%</h1>
+            <p class = "postertxt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p class = "shop">SHOP NOW</p>
+        </div>
+
+        <div class = "products">
+            <p class = "all">ALL PRODUCTS</p>
+            <div class = "rowProduct">
+                <div class = "Product">
+                    <img src = "assets/images/1.jpg" alt = "First Product">
+                    <p class = "name name1">Cuffed Beanie</p>
+                    <p class = "price">$15.00</p>
+                </div>
+                <div class = "Product mrgn">
+                    <img src = "assets/images/2.jpg" alt = "First Product">
+                    <p class = "name name2">Calvin Klein Sweatpants</p>
+                    <p class = "price">$36.00</p>
+                </div>
+                <div class = "Product">
+                    <img src = "assets/images/3.jpg" alt = "First Product">
+                    <p class = "name name3">Pink Leather Watch</p>
+                    <p class = "price">$36.00</p>
+                </div>
+            </div>
+            <div class = "rowProduct">
+                <div class = "Product">
+                    <img src = "assets/images/4.jpg" alt = "First Product">
+                    <p class = "name name4">Cyan Boheme</p>
+                    <p class = "price">$36.00</p>
+                </div>
+                <div class = "Product mrgn">
+                    <img src = "assets/images/5.jpg" alt = "First Product">
+                    <p class = "name name5">Woleen Tee</p>
+                    <p class = "price">$36.00</p>
+                </div>
+                <div class = "Product">
+                    <img src = "assets/images/6.jpg" alt = "First Product">
+                    <p class = "name name6">Denim Shell Top Ruffle</p>
+                    <p class = "price">$36.00</p>
+                </div>
+            </div>
+            <div class = "rowProduct">
+                <div class = "Product" >
+                    <img src = "assets/images/7.jpg" alt = "First Product">
+                    <p class = "name name7">Cluse La Bohème Rose</p>
+                    <p class = "price border">$36.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+                <div class = "Product mrgn">
+                    <img src = "assets/images/8.jpg" alt = "First Product">
+                    <p class = "name name8">Cuffed Beanie</p>
+                    <p class = "price border">$10.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+                <div class = "Product">
+                    <img src = "assets/images/9.jpg" alt = "First Product">
+                    <p class = "name name9">Asos Ridley High Waist</p>
+                    <p class = "price border">$36.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "rowProduct">
+                <div class = "Product">
+                    <img src = "assets/images/10.jpg" alt = "First Product">
+                    <p class = "name name10">Analogue Resin Strap</p>
+                    <p class = "price border">$36.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+                <div class = "Product mrgn">
+                    <img src = "assets/images/11.jpg" alt = "First Product">
+                    <p class = "name name11">Ridley High Waist</p>
+                    <p class = "price border">$36.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+                <div class = "Product">
+                    <img src = "assets/images/12.jpg" alt = "First Product">
+                    <p class = "name name12">Shell Top with Ruffle Front</p>
+                    <p class = "price border">$36.00</p>
+                    <div class = "info">
+                        <div class = "numbers">
+                            <p class = "number">1250</p>
+                            <p class = "number">1250</p>
+                        </div>
+                        <p class = "add"> ADD TO CART</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        <div class = "horizontalPhotos">
+            <img src = "assets/images/footer1.jpg">
+            <img src = "assets/images/footer2.jpg">
+            <img src = "assets/images/footer3.jpg">
+            <img src = "assets/images/footer4.jpg">
+            <img src = "assets/images/footer5.jpg">
+            <img src = "assets/images/footer6.jpg">
+            <img src = "assets/images/footer7.jpg">
+            <img src = "assets/images/footer8.jpg">
+        </div>
+
+        <div class = "footerinfo">
+            <p class = "copyright">
+                Copyright © 2019 Sello all rights reserved. Powered by Designik
+            </p>
+
+            <ul class = "ul">
+                <li class = "li" style = "--clr:#1877f2;">
+                    <a href = "https://www.facebook.com" target = "blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li  class = "li" style = "--clr:#ff0000;">
+                    <a href = "https://www.youtube.com" target = "blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li  class = "li" style = "--clr:#1da1f2;">
+                    <a href = "https://twitter.com" target = "blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li  class = "li" style = "--clr:#c32aa3;">
+                    <a href = "https://www.instagram.com" target = "blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li  class = "li" style = "--clr:#25d366;">
+                    <a href = "https://www.whatsapp.com" target = "blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+</body>
+</html>
